@@ -1,0 +1,22 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 270px;
+}
+
+.card__img {
+    margin-bottom: 40px;
+}
+
+.card__title {
+    margin-bottom: 20px;
+}
+
+.card__content {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 2.14;
+    text-align: center;
+    color: $paragraphText;
+}
