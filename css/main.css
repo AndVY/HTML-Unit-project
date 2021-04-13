@@ -227,6 +227,13 @@ legend {
   line-height: 1;
 }
 
+.paragraph-text {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 2.14;
+  color: #808080;
+}
+
 .input {
   padding-left: 30px;
   padding-right: 30px;
@@ -291,6 +298,9 @@ legend {
           align-items: center;
   width: 270px;
 }
+.card p {
+  text-align: center;
+}
 
 .card__img {
   margin-bottom: 40px;
@@ -298,14 +308,6 @@ legend {
 
 .card__title {
   margin-bottom: 20px;
-}
-
-.card__content {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 2.14;
-  text-align: center;
-  color: #808080;
 }
 
 .functional {
@@ -333,6 +335,78 @@ legend {
   flex-shrink: 0;
   margin-left: 15px;
   margin-right: 15px;
+}
+
+.cta {
+  position: relative;
+  padding-top: 83px;
+  padding-bottom: 84px;
+  background-image: url("./../img/site-images/cta.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.cta::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.35);
+}
+
+.cta__content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  color: #ffffff;
+}
+
+.cta__title {
+  margin-bottom: 40px;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 1;
+}
+.cta__title span {
+  font-weight: 700;
+}
+
+.flex-control {
+  padding-top: 80px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.flex-control__row {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+          align-items: center;
+  padding-left: 100px;
+  padding-right: 114px;
+}
+
+.flex-control__content {
+  width: 570px;
+}
+
+.flex-control__title {
+  margin-bottom: 30px;
+}
+
+.flex-control__subtitle {
+  margin-bottom: 30px;
+}
+
+.flex-control__text {
+  width: 400px;
+}
+.flex-control__text p:not(:last-child) {
+  margin-bottom: 15px;
 }
 
 /*# sourceMappingURL=main.css.map */
