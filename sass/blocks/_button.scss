@@ -1,0 +1,28 @@
+.button {
+    padding-left: 40px;
+    padding-right: 40px;
+    width: 250px;
+    height: 60px;
+
+    border: none;
+    border-radius: 30px;
+    background: $accentButton;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 60px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #ffffff;
+
+    cursor: pointer;
+
+    &:hover {
+        background: #00af63;
+    }
+
+    &:active,
+    &:focus {
+        outline: none;
+        background: #008d50;
+    }
+}

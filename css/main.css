@@ -1,3 +1,14 @@
+.header::before, .cta::before, .prices::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.35);
+}
+
 /* Reset and base styles  */
 *,
 *::before,
@@ -110,18 +121,7 @@ legend {
   height: 870px;
   background-image: url("../img/site-images/bg-top.jpg");
   background-size: cover;
-  background-repeat: no-repeat;
   background-position: center;
-}
-.header::before {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.35);
 }
 
 .header__content {
@@ -181,6 +181,10 @@ legend {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
+.header__scroll:hover {
+  -webkit-filter: drop-shadow(0 0 10px #ffffff);
+          filter: drop-shadow(0 0 10px #ffffff);
+}
 
 .button-rounded {
   display: -webkit-box;
@@ -198,6 +202,79 @@ legend {
 }
 .button-rounded:hover {
   background-color: #00c470;
+}
+
+.button {
+  padding-left: 40px;
+  padding-right: 40px;
+  width: 250px;
+  height: 60px;
+  border: none;
+  border-radius: 30px;
+  background: #00c470;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 60px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #ffffff;
+  cursor: pointer;
+}
+.button:hover {
+  background: #00af63;
+}
+.button:active, .button:focus {
+  outline: none;
+  background: #008d50;
+}
+
+.button-outline {
+  padding-left: 40px;
+  padding-right: 40px;
+  height: 60px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+  background: transparent;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 60px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #ffffff;
+  cursor: pointer;
+}
+.button-outline:hover {
+  border: 1px solid rgba(255, 255, 255, 0);
+  background: rgba(255, 255, 255, 0.2);
+}
+.button-outline:active, .button-outline:focus {
+  outline: none;
+  background: #000000;
+}
+
+.button-solid {
+  padding-left: 40px;
+  padding-right: 40px;
+  height: 60px;
+  border: none;
+  border-radius: 30px;
+  background: #ffffff;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 60px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #2e2e2e;
+  cursor: pointer;
+}
+.button-solid:hover {
+  background: #000000;
+  color: #ffffff;
+}
+.button-solid:active, .button-solid:focus {
+  outline: none;
+  background: #2f2f2f;
+  color: #ffffff;
 }
 
 .title-1 {
@@ -264,30 +341,6 @@ legend {
   background-color: black;
 }
 
-.button {
-  padding-left: 40px;
-  padding-right: 40px;
-  width: 250px;
-  height: 60px;
-  border: none;
-  border-radius: 30px;
-  background: #00c470;
-  font-weight: 800;
-  font-size: 14px;
-  line-height: 60px;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  color: #ffffff;
-  cursor: pointer;
-}
-.button:hover {
-  background: #00af63;
-}
-.button:active, .button:focus {
-  outline: none;
-  background: #008d50;
-}
-
 .card {
   display: -webkit-box;
   display: flex;
@@ -341,19 +394,9 @@ legend {
   position: relative;
   padding-top: 83px;
   padding-bottom: 84px;
-  background-image: url("./../img/site-images/cta.jpg");
+  background-image: url("../img/site-images/cta.jpg");
   background-size: cover;
   background-position: center;
-}
-.cta::before {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.35);
 }
 
 .cta__content {
@@ -407,6 +450,162 @@ legend {
 }
 .flex-control__text p:not(:last-child) {
   margin-bottom: 15px;
+}
+
+.focus {
+  padding-top: 80px;
+  padding-bottom: 40px;
+}
+
+.focus__row {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+          align-items: center;
+}
+
+.focus__content {
+  margin-top: -60px;
+  width: 470px;
+}
+
+.focus__title {
+  margin-bottom: 30px;
+}
+
+.focus__subtitle {
+  margin-bottom: 30px;
+}
+
+.focus__text {
+  width: 400px;
+}
+.focus__text p:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.prices {
+  position: relative;
+  padding-top: 90px;
+  padding-bottom: 100px;
+  background-image: url("../img/site-images/bg-bottom.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.prices__content {
+  position: relative;
+  z-index: 10;
+}
+
+.prices__header {
+  margin-bottom: 80px;
+  text-align: center;
+}
+.prices__header .title-2,
+.prices__header .title-3 {
+  color: #ffffff;
+}
+
+.prices__title {
+  margin-bottom: 40px;
+}
+
+.prices__row {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.prices__row > * {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.tariff {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  width: 300px;
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 8px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.tariff__header {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tariff__title {
+  margin-bottom: 20px;
+}
+.tariff__title .title-2 {
+  color: #b2b2b2;
+}
+
+.tariff__price {
+  margin-bottom: 15px;
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 1;
+  text-align: center;
+}
+
+.tariff__period {
+  display: inline-block;
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 24px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 24px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.tariff__content {
+  padding-top: 40px;
+  padding-bottom: 58px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.tariff__content-item {
+  margin-bottom: 25px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1;
+}
+.tariff__content-item:last-child {
+  margin-bottom: 0;
+}
+
+.tariff__button {
+  margin-top: auto;
+}
+
+.tariff--special {
+  background: rgba(48, 79, 254, 0.95);
+}
+.tariff--special .title-2 {
+  color: #ffffff;
+}
+.tariff--special .tariff__period {
+  background: rgba(0, 0, 0, 0.1);
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,30 @@
+.focus {
+    padding-top: 80px;
+    padding-bottom: 40px;
+}
+
+.focus__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.focus__content {
+    margin-top: -60px;
+    width: 470px;
+}
+
+.focus__title {
+    margin-bottom: 30px;
+}
+
+.focus__subtitle {
+    margin-bottom: 30px;
+}
+
+.focus__text {
+    width: 400px;
+
+    p:not(:last-child) {
+        margin-bottom: 15px;
+    }
+}

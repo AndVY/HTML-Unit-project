@@ -2,21 +2,10 @@
     position: relative;
     height: 870px;
 
-    background-image: url("../img/site-images/bg-top.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    @include bgImage("../img/site-images/bg-top.jpg");
 
     &::before {
-        content: "";
-        display: block;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-
-        background-color: rgba(0, 0, 0, 0.35);
+        @extend %background-overlay;
     }
 }
 
@@ -77,4 +66,8 @@
     bottom: 100px;
     left: 50%;
     transform: translateX(-50%);
+
+    &:hover {
+        filter: drop-shadow(0 0 10px #ffffff);
+    }
 }
