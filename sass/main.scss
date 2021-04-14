@@ -4,9 +4,19 @@
 @import "./base/mixins";
 @import "./base/base";
 
+// Sections
+
+@import "./sections/header";
+@import "./sections/section-functional";
+@import "./sections/section-cta";
+@import "./sections/section-flex-control";
+@import "./sections/section-focus";
+@import "./sections/section-prices";
+@import "./sections/section-clients";
+@import "./sections/footer";
+
 // Blocks
 
-@import "./blocks/header";
 @import "./blocks/button-rounded";
 @import "./blocks/button";
 @import "./blocks/button-outline";
@@ -14,9 +24,5 @@
 @import "./blocks/titles";
 @import "./blocks/form";
 @import "./blocks/card";
-@import "./blocks/section-functional";
-@import "./blocks/section-cta";
-@import "./blocks/section-flex-control";
-@import "./blocks/section-focus";
-@import "./blocks/section-prices";
 @import "./blocks/tariff";
+@import "./blocks/slider";

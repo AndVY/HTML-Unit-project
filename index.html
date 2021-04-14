@@ -58,7 +58,7 @@
         <link rel="stylesheet" href="./fonts/montserrat/stylesheet.css" />
     </head>
     <body>
-        <header class="header none">
+        <header class="header">
             <div class="header__content">
                 <div class="container">
                     <div class="header__buttons">
@@ -80,8 +80,11 @@
                             <h1 class="title-1">ЮНИТ</h1>
                         </div>
                         <div class="header__subtitle">
-                            Управляй задачами и проектами из любой точки вместе
-                            с ЮНИТ. Дома. На работе. В дороге. Онлайн. Оффлайн.
+                            <p>
+                                Управляй задачами и проектами из любой точки
+                                вместе с ЮНИТ. Дома. На работе. В дороге.
+                                Онлайн. Оффлайн.
+                            </p>
                         </div>
                         <form class="header__form">
                             <input
@@ -111,14 +114,12 @@
             </div>
         </header>
 
-        <section class="functional none" id="functional">
+        <section class="functional" id="functional">
             <div class="container">
-                <div class="functional__header">
-                    <div class="functional__title">
-                        <h2 class="title-2">функционал</h2>
-                    </div>
+                <header class="functional__header">
+                    <h2 class="functional__title title-2">функционал</h2>
                     <h3 class="title-3">Получайте больше</h3>
-                </div>
+                </header>
                 <div class="functional__cards">
                     <div class="card">
                         <div class="card__img">
@@ -188,29 +189,27 @@
             </div>
         </section>
 
-        <section class="cta none">
+        <section class="cta">
             <div class="cta__content">
                 <div class="container">
-                    <div class="cta__title">
+                    <h2 class="cta__title">
                         Начните использовать <span>ЮНИТ</span> уже сегодня.
-                    </div>
-                    <div class="cta__button">
-                        <button class="button">подключить</button>
-                    </div>
+                    </h2>
+                    <button class="button">подключить</button>
                 </div>
             </div>
         </section>
 
-        <section class="flex-control none">
+        <section class="flex-control">
             <div class="container">
                 <div class="flex-control__row">
                     <div class="flex-control__content">
-                        <div class="flex-control__title">
-                            <h2 class="title-2">гибкое управление</h2>
-                        </div>
-                        <div class="flex-control__subtitle">
-                            <h3 class="title-3">Задачи и подзадачи</h3>
-                        </div>
+                        <h2 class="flex-control__title title-2">
+                            гибкое управление
+                        </h2>
+                        <h3 class="flex-control__subtitle title-3">
+                            Задачи и подзадачи
+                        </h3>
                         <div class="flex-control__text">
                             <p class="paragraph-text">
                                 Тактика выстраивания отношений с коммерчекими
@@ -229,19 +228,17 @@
             </div>
         </section>
 
-        <section class="focus none">
+        <section class="focus">
             <div class="container">
                 <div class="focus__row">
                     <div class="focus__img">
                         <img src="./img/content/ipad-pro.jpg" alt="iPad-pro" />
                     </div>
                     <div class="focus__content">
-                        <div class="focus__title">
-                            <h2 class="title-2">всегда в фокусе</h2>
-                        </div>
-                        <div class="focus__subtitle">
-                            <h3 class="title-3">Множественные приоритеты</h3>
-                        </div>
+                        <h2 class="focus__title title-2">всегда в фокусе</h2>
+                        <h3 class="focus__subtitle title-3">
+                            Множественные приоритеты
+                        </h3>
                         <div class="focus__text">
                             <p class="paragraph-text">
                                 Потребление существенно продуцирует рыночный
@@ -259,14 +256,12 @@
         <section class="prices">
             <div class="prices__content">
                 <div class="container">
-                    <div class="prices__header">
-                        <div class="prices__title">
-                            <h2 class="title-2">цены</h2>
-                        </div>
-                        <div class="prices__subtitle">
-                            <h3 class="title-3">Выберите подходящий план</h3>
-                        </div>
-                    </div>
+                    <header class="prices__header">
+                        <h2 class="prices__title title-2">цены</h2>
+                        <h3 class="prices__subtitle title-3">
+                            Выберите подходящий план
+                        </h3>
+                    </header>
                     <!-- end of prices-header -->
 
                     <div class="prices__row">
@@ -367,6 +362,92 @@
             </div>
         </section>
 
-        <footer class="footer">Sticky footer. Always at bottom</footer>
+        <section class="clients">
+            <div class="container">
+                <header class="clients__header">
+                    <h2 class="clients__title title-2">наши клиенты</h2>
+                    <h3 class="clients__subtitile title-3">
+                        Что говорят пользователи
+                    </h3>
+                </header>
+                <div class="clients__slider">
+                    <div class="slider">
+                        <button class="slider__arrow slider__arrow--left">
+                            <img
+                                src="./img/icons/site/arrow-left.svg"
+                                alt="Back"
+                            />
+                        </button>
+                        <button class="slider__arrow slider__arrow--right">
+                            <img
+                                src="./img/icons/site/arrow-right.svg"
+                                alt="Forward"
+                            />
+                        </button>
+                        <div class="slider-item">
+                            <div class="slider-item__text">
+                                <p>
+                                    Это потрясающее приложение, которое помогло
+                                    мне завершить все мои дела и сделать
+                                    дипломный проект раньше срока.
+                                </p>
+                            </div>
+                            <div class="slider-item__author">
+                                <div class="slider-item__avatar">
+                                    <img
+                                        src="./img/content/user.jpg"
+                                        alt="User photo"
+                                    />
+                                </div>
+                                <div class="slider-item__author-desc">
+                                    <span class="slider-item__author-title"
+                                        >Фрилансер</span
+                                    >
+                                    <span class="slider-item__author-name"
+                                        >Николай Остапов</span
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of slider  -->
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__row">
+                    <nav class="footer__nav">
+                        <a href="#" class="footer__nav-item">о нас</a>
+                        <a href="#" class="footer__nav-item">блог</a>
+                        <a href="#" class="footer__nav-item">контакты</a>
+                    </nav>
+                    <div class="footer__social">
+                        <a class="footer__social-item" href="#"
+                            ><img
+                                src="./img/icons/social/twitter.svg"
+                                alt="Twitter"
+                        /></a>
+                        <a class="footer__social-item" href="#"
+                            ><img
+                                src="./img/icons/social/facebook.svg"
+                                alt="Facebook"
+                        /></a>
+                        <a class="footer__social-item" href="#"
+                            ><img
+                                src="./img/icons/social/instagram.svg"
+                                alt="Instagram"
+                        /></a>
+                        <a class="footer__social-item" href="#"
+                            ><img src="./img/icons/social/vk.svg" alt="VK"
+                        /></a>
+                    </div>
+                </div>
+                <div class="footer__copyright">
+                    <p>Копирайт &copy; 2019 ЮНИТ. Все права защищены.</p>
+                </div>
+            </div>
+        </footer>
     </body>
 </html>
