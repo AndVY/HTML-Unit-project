@@ -25,4 +25,11 @@
         outline: none;
         background: #008d50;
     }
+
+    @media (max-width: 899px) {
+        width: auto;
+    }
+    @media (max-width: 599px) {
+    }
+    
 }

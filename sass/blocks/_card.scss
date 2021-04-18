@@ -4,8 +4,16 @@
     align-items: center;
     width: 270px;
 
-    p {
-        text-align: center;
+    text-align: center;
+
+    @media (max-width: 1199px) {
+        width: 195px;
+    }
+    @media (max-width: 899px) {
+        width: 270px;
+    }
+    @media (max-width: 599px) {
+        width: auto;
     }
 }
 
@@ -15,4 +23,8 @@
 
 .card__title {
     margin-bottom: 20px;
+
+    @media (max-width: 1199px) {
+        margin-bottom: 10px;
+    }
 }

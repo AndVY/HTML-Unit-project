@@ -7,10 +7,22 @@
     &::before {
         @extend %background-overlay;
     }
+
+    @media (max-width: 1199px) {
+        height: 720px;
+
+        & .container {
+            width: auto;
+        }
+    }
+    @media (max-width: 899px) {
+        height: auto;
+    }
 }
 
 .header__content {
-    position: absolute;
+    // position: absolute;
+    position: relative;
     padding-top: 60px;
     width: 100%;
     height: 100%;
@@ -18,25 +30,56 @@
     left: 0;
 
     color: #ffffff;
+
+    @media (max-width: 899px) {
+        padding-top: 20px;
+    }
 }
 
 .header__buttons {
     display: flex;
     justify-content: space-between;
+
+    @media (max-width: 899px) {
+        margin-bottom: 30px;
+    }
 }
 
 .header__main {
     position: absolute;
-    width: 970px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 970px;
 
     text-align: center;
+
+    @media (max-width: 1199px) {
+        width: 870px;
+    }
+    @media (max-width: 899px) {
+        position: static;
+        transform: none;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 80px;
+        width: 430px;
+    }
+    @media (max-width: 599px) {
+        margin-bottom: 50px;
+        width: 290px;
+    }
 }
 
 .header__title {
     margin-bottom: 40px;
+
+    @media (max-width: 1199px) {
+        margin-bottom: 35px;
+    }
+    @media (max-width: 899px) {
+        margin-bottom: 30px;
+    }
 }
 
 .header__subtitle {
@@ -47,6 +90,19 @@
 
     font-size: 20px;
     font-weight: 700;
+
+    @media (max-width: 1199px) {
+        margin-bottom: 50px;
+        font-size: 18px;
+    }
+    @media (max-width: 899px) {
+        max-width: 430px;
+        font-size: 16px;
+    }
+    @media (max-width: 599px) {
+        margin-bottom: 30px;
+        max-width: 290px;
+    }
 }
 
 .header__form {
@@ -59,6 +115,20 @@
     // or & > * + * {
     //     margin-left: 20px;
     // }
+
+    @media (max-width: 899px) {
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+        width: 370px;
+        & > *:not(:last-child) {
+            margin-right: 0px;
+            margin-bottom: 20px;
+        }
+    }
+    @media (max-width: 599px) {
+        width: 290px;
+    }
 }
 
 .header__scroll {
@@ -69,5 +139,20 @@
 
     &:hover {
         filter: drop-shadow(0 0 10px #ffffff);
+    }
+
+    @media (max-width: 1199px) {
+        bottom: 50px;
+    }
+    @media (max-width: 899px) {
+        position: static;
+        transform: none;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50px;
+    }
+    @media (max-width: 599px) {
+        // bottom: 40px;
+        margin-bottom: 40px;
     }
 }

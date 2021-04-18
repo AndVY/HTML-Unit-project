@@ -22,6 +22,7 @@ body {
 
 body > * {
     flex-shrink: 0; /* sticky footer */
+    scroll-behavior: smooth;
 }
 
 html,
@@ -81,6 +82,16 @@ legend {
     margin: 0 auto;
     padding-left: 15px;
     padding-right: 15px;
+
+    @media (max-width: 1199px) {
+        width: 900px;
+    }
+    @media (max-width: 899px) {
+        width: 600px;
+    }
+    @media (max-width: 599px) {
+        width: 320px;
+    }
 }
 
 /* Utility */
