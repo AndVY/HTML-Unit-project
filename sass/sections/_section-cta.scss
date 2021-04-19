@@ -8,6 +8,23 @@
     &::before {
         @extend %background-overlay;
     }
+
+    // Desktop with width up to 1600px
+    @media (max-width: 1600px) {
+        @include bgImage("../img/site-images/cta-1600.jpg");
+    }
+    @media (max-width: 1199px) {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        // If HQ bacrground needed, still cta-1600 and so on
+        @include bgImage("../img/site-images/cta-900.jpg");
+    }
+    @media (max-width: 899px) {
+        @include bgImage("../img/site-images/cta-600.jpg");
+    }
+    @media (max-width: 599px) {
+        @include bgImage("../img/site-images/cta-320.jpg");
+    }
 }
 
 .cta__content {
@@ -26,6 +43,16 @@
     line-height: 1;
 
     span {
+        text-transform: uppercase;
         font-weight: 700;
+    }
+
+    @media (max-width: 899px) {
+        margin-bottom: 30px;
+        font-size: 20px;
+    }
+    @media (max-width: 599px) {
+        margin-bottom: 20px;
+        font-size: 18px;
     }
 }

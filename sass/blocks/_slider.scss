@@ -1,5 +1,10 @@
 .slider {
     position: relative;
+    padding-bottom: 54px;
+
+    @media (max-width: 899px) {
+        padding-bottom: 44px;
+    }
 }
 
 .slider__arrow {
@@ -27,6 +32,10 @@
         right: -46px;
         transform: translateX(100%);
     }
+
+    @media (max-width: 599px) {
+        display: none;
+    }
 }
 
 .slider-item {
@@ -47,6 +56,18 @@
     & p:not(:last-child) {
         margin-bottom: 15px;
     }
+
+    @media (max-width: 1199px) {
+        line-height: 1.5;
+    }
+    @media (max-width: 899px) {
+        margin-bottom: 20px;
+
+        font-size: 16px;
+    }
+    @media (max-width: 599px) {
+        font-size: 14px;
+    }
 }
 
 .slider-item__author {
@@ -63,6 +84,18 @@
     height: 80px;
     border-radius: 50%;
     overflow: hidden;
+
+    @media (max-width: 599px) {
+        margin-right: 10px;
+        width: 60px;
+        height: 60px;
+    }
+}
+
+.slider-item__author-desc {
+    @media (max-width: 599px) {
+        font-size: 14px;
+    }
 }
 
 .slider-item__author-title {
@@ -75,4 +108,30 @@
 .slider-item__author-name {
     display: block;
     color: #808080;
+}
+
+.slider__pagination {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.slider__pagination-item {
+    width: 14px;
+    height: 14px;
+
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    background: #e1e1e1;
+
+    &:not(:last-child) {
+        margin-right: 10px;
+    }
+}
+
+.slider__pagination-item--active {
+    background-color: $accentButton;
 }

@@ -1,7 +1,7 @@
 .input {
+    display: block;
     padding-left: 30px;
     padding-right: 30px;
-    width: 240px;
     height: 60px;
 
     border: none;
@@ -19,9 +19,5 @@
     &:focus {
         outline: none;
         background-color: rgba(0, 0, 0, 1);
-    }
-
-    @media (max-width: 899px) {
-        width: auto;
     }
 }

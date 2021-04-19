@@ -1,24 +1,100 @@
 .focus {
     padding-top: 80px;
     padding-bottom: 40px;
+
+    overflow-x: hidden;
+
+    @media (max-width: 1199px) {
+        padding-top: 50px;
+        padding-bottom: 20px;
+    }
+    @media (max-width: 899px) {
+        padding-bottom: 0;
+    }
+    @media (max-width: 599px) {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
 }
 
 .focus__row {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    & > * {
+        flex-shrink: 0;
+    }
+
+    @media (max-width: 899px) {
+        flex-direction: row-reverse;
+    }
+    @media (max-width: 599px) {
+        flex-direction: column;
+    }
 }
+
 .focus__content {
     margin-top: -60px;
     width: 470px;
+
+    @media (max-width: 1199px) {
+        width: 420px;
+    }
+    @media (max-width: 899px) {
+        width: 370px;
+    }
+    @media (max-width: 599px) {
+        margin-top: 0;
+        width: 100%;
+
+        text-align: center;
+    }
+}
+
+.focus__img {
+    @media (max-width: 1199px) {
+        width: 420px;
+    }
+    @media (max-width: 899px) {
+        width: 170px;
+
+        img {
+            max-width: unset;
+            width: 415px;
+            height: auto;
+        }
+    }
+    @media (max-width: 599px) {
+        margin-bottom: 10px;
+        width: 100%;
+
+        img {
+            margin-left: auto;
+            margin-right: auto;
+            width: unset;
+            max-width: 100%;
+        }
+    }
 }
 
 .focus__title {
     margin-bottom: 30px;
+
+    @media (max-width: 1199px) {
+        margin-bottom: 20px;
+    }
+    @media (max-width: 599px) {
+        margin-bottom: 10px;
+    }
 }
 
-.focus__subtitle {
+.focus__header {
     margin-bottom: 30px;
+
+    @media (max-width: 1199px) {
+        margin-bottom: 20px;
+    }
 }
 
 .focus__text {
@@ -26,5 +102,16 @@
 
     p:not(:last-child) {
         margin-bottom: 15px;
+    }
+
+    & .paragraph-text {
+        @media (max-width: 899px) {
+            line-height: 1.71;
+        }
+    }
+
+    @media (max-width: 1199px) {
+        width: unset;
+        max-width: 420px;
     }
 }

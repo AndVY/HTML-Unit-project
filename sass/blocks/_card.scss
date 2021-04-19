@@ -1,24 +1,21 @@
 .card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 270px;
-
     text-align: center;
 
-    @media (max-width: 1199px) {
-        width: 195px;
-    }
-    @media (max-width: 899px) {
-        width: 270px;
-    }
-    @media (max-width: 599px) {
-        width: auto;
+    & .paragraph-text {
+        @media (max-width: 899px) {
+            line-height: 1.71;
+        }
     }
 }
 
 .card__img {
     margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (max-width: 1199px) {
+        margin-bottom: 20px;
+    }
 }
 
 .card__title {
@@ -26,5 +23,9 @@
 
     @media (max-width: 1199px) {
         margin-bottom: 10px;
+        min-height: 32px;
+    }
+    @media (max-width: 899px) {
+        min-height: unset;
     }
 }

@@ -8,6 +8,27 @@
     &::before {
         @extend %background-overlay;
     }
+
+    // Desktop with width up to 1600px
+    @media (max-width: 1600px) {
+        @include bgImage("../img/site-images/bg-bottom-1600.jpg");
+    }
+    @media (max-width: 1199px) {
+        padding-top: 50px;
+        padding-bottom: 50px;
+
+        @include bgImage("../img/site-images/bg-bottom-900.jpg");
+    }
+    @media (max-width: 899px) {
+        padding-bottom: 40px;
+
+        @include bgImage("../img/site-images/bg-bottom-600.jpg");
+    }
+    @media (max-width: 599px) {
+        padding-top: 40px;
+
+        @include bgImage("../img/site-images/bg-bottom-320.jpg");
+    }
 }
 
 .prices__content {
@@ -24,10 +45,24 @@
     .title-3 {
         color: #ffffff;
     }
+
+    @media (max-width: 1199px) {
+        margin-bottom: 50px;
+    }
+    @media (max-width: 899px) {
+        margin-bottom: 40px;
+    }
 }
 
 .prices__title {
     margin-bottom: 40px;
+
+    @media (max-width: 1199px) {
+        margin-bottom: 20px;
+    }
+    @media (max-width: 599px) {
+        margin-bottom: 10px;
+    }
 }
 
 .prices__row {
@@ -39,5 +74,24 @@
     & > * {
         margin-left: 15px;
         margin-right: 15px;
+        width: 300px;
+
+        @media (max-width: 1199px) {
+            width: 270px;
+        }
+
+        @media (max-width: 899px) {
+            margin-top: 30px;
+            width: 300px;
+        }
+        @media (max-width: 599px) {
+            width: 290px;
+        }
+    }
+
+    @media (max-width: 899px) {
+        flex-direction: column;
+        align-items: center;
+        margin-top: -30px;
     }
 }

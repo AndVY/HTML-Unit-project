@@ -18,12 +18,26 @@
     letter-spacing: 4px;
     text-transform: uppercase;
     color: $accentText;
+
+    @media (max-width: 899px) {
+        font-size: 14px;
+    }
 }
 
 .title-3 {
     font-size: 48px;
     font-weight: 700;
     line-height: 1;
+
+    @media (max-width: 1199px) {
+        font-size: 38px;
+    }
+    @media (max-width: 899px) {
+        font-size: 30px;
+    }
+    @media (max-width: 599px) {
+        font-size: 26px;
+    }
 }
 
 .title-4 {

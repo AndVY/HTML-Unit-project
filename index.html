@@ -59,57 +59,54 @@
     </head>
     <body>
         <header class="header">
-            <div class="header__content">
-                <div class="container">
-                    <div class="header__buttons">
-                        <button class="button-rounded">
-                            <img
-                                src="./img/icons/site/menu.svg"
-                                alt="Navigation button"
-                            />
+            <div class="header__wrapper">
+                <div class="header__buttons">
+                    <button class="button-rounded">
+                        <img
+                            src="./img/icons/site/menu.svg"
+                            alt="Navigation button"
+                        />
+                    </button>
+                    <button class="button-rounded">
+                        <img
+                            src="./img/icons/site/search.svg"
+                            alt="Search button"
+                        />
+                    </button>
+                </div>
+                <div class="container header__content">
+                    <div class="header__title">
+                        <h1 class="title-1">ЮНИТ</h1>
+                    </div>
+                    <div class="header__subtitle">
+                        <p>
+                            Управляй задачами и проектами из любой точки вместе
+                            с ЮНИТ. Дома. На работе. В дороге. Онлайн. Оффлайн.
+                        </p>
+                    </div>
+                    <form class="header__form">
+                        <input
+                            type="text"
+                            class="header__form-input input"
+                            placeholder="Ваше имя"
+                        />
+                        <input
+                            type="email"
+                            class="header__form-input input input"
+                            placeholder="Email"
+                        />
+                        <button type="submit" class="button">
+                            начать триал
                         </button>
-                        <button class="button-rounded">
-                            <img
-                                src="./img/icons/site/search.svg"
-                                alt="Search button"
-                            />
-                        </button>
-                    </div>
-                    <div class="header__main">
-                        <div class="header__title">
-                            <h1 class="title-1">ЮНИТ</h1>
-                        </div>
-                        <div class="header__subtitle">
-                            <p>
-                                Управляй задачами и проектами из любой точки
-                                вместе с ЮНИТ. Дома. На работе. В дороге.
-                                Онлайн. Оффлайн.
-                            </p>
-                        </div>
-                        <form class="header__form">
-                            <input
-                                type="text"
-                                class="input"
-                                placeholder="Ваше имя"
-                            />
-                            <input
-                                type="email"
-                                class="input"
-                                placeholder="Email"
-                            />
-                            <button type="submit" class="button">
-                                начать триал
-                            </button>
-                        </form>
-                    </div>
-                    <div class="header__scroll">
-                        <a href="#functional">
-                            <img
-                                src="./img/icons/site/mouse.svg"
-                                alt="Scroll down"
-                            />
-                        </a>
-                    </div>
+                    </form>
+                </div>
+                <div class="header__scroll">
+                    <a href="#functional">
+                        <img
+                            src="./img/icons/site/mouse.svg"
+                            alt="Scroll down"
+                        />
+                    </a>
                 </div>
             </div>
         </header>
@@ -122,12 +119,11 @@
                 </header>
                 <div class="functional__cards">
                     <div class="card">
-                        <div class="card__img">
-                            <img
-                                src="./img/icons/content/file-check.svg"
-                                alt="Control"
-                            />
-                        </div>
+                        <img
+                            class="card__img"
+                            src="./img/icons/content/file-check.svg"
+                            alt="Control"
+                        />
                         <div class="card__title">
                             <h4 class="title-4">Создан для управления</h4>
                         </div>
@@ -138,12 +134,11 @@
                     </div>
                     <!-- end of card -->
                     <div class="card">
-                        <div class="card__img">
-                            <img
-                                src="./img/icons/content/microphone.svg"
-                                alt="Microphone"
-                            />
-                        </div>
+                        <img
+                            class="card__img"
+                            src="./img/icons/content/microphone.svg"
+                            alt="Microphone"
+                        />
                         <div class="card__title">
                             <h4 class="title-4">Голосовое управление</h4>
                         </div>
@@ -154,12 +149,11 @@
                     </div>
                     <!-- end of card -->
                     <div class="card">
-                        <div class="card__img">
-                            <img
-                                src="./img/icons/content/money-stack.svg"
-                                alt="Budget"
-                            />
-                        </div>
+                        <img
+                            class="card__img"
+                            src="./img/icons/content/money-stack.svg"
+                            alt="Budget"
+                        />
                         <div class="card__title">
                             <h4 class="title-4">Контроль бюджета</h4>
                         </div>
@@ -170,12 +164,11 @@
                     </div>
                     <!-- end of card -->
                     <div class="card">
-                        <div class="card__img">
-                            <img
-                                src="./img/icons/content/chart-pie.svg"
-                                alt="Statistics"
-                            />
-                        </div>
+                        <img
+                            class="card__img"
+                            src="./img/icons/content/chart-pie.svg"
+                            alt="Statistics"
+                        />
                         <div class="card__title">
                             <h4 class="title-4">Статистика и графики</h4>
                         </div>
@@ -189,7 +182,7 @@
             </div>
         </section>
 
-        <section class="cta none">
+        <section class="cta">
             <div class="cta__content">
                 <div class="container">
                     <h2 class="cta__title">
@@ -202,16 +195,18 @@
             </div>
         </section>
 
-        <section class="flex-control none">
+        <section class="flex-control">
             <div class="container">
                 <div class="flex-control__row">
                     <div class="flex-control__content">
-                        <h2 class="flex-control__title title-2">
-                            гибкое управление
-                        </h2>
-                        <h3 class="flex-control__subtitle title-3">
-                            Задачи и подзадачи
-                        </h3>
+                        <div class="flex-control__header">
+                            <h2 class="flex-control__title title-2">
+                                гибкое управление
+                            </h2>
+                            <h3 class="flex-control__subtitle title-3">
+                                Задачи и подзадачи
+                            </h3>
+                        </div>
                         <div class="flex-control__text">
                             <p class="paragraph-text">
                                 Тактика выстраивания отношений с коммерчекими
@@ -230,17 +225,21 @@
             </div>
         </section>
 
-        <section class="focus none">
+        <section class="focus">
             <div class="container">
                 <div class="focus__row">
                     <div class="focus__img">
                         <img src="./img/content/ipad-pro.jpg" alt="iPad-pro" />
                     </div>
                     <div class="focus__content">
-                        <h2 class="focus__title title-2">всегда в фокусе</h2>
-                        <h3 class="focus__subtitle title-3">
-                            Множественные приоритеты
-                        </h3>
+                        <div class="focus__header">
+                            <h2 class="focus__title title-2">
+                                всегда в фокусе
+                            </h2>
+                            <h3 class="focus__subtitle title-3">
+                                Множественные приоритеты
+                            </h3>
+                        </div>
                         <div class="focus__text">
                             <p class="paragraph-text">
                                 Потребление существенно продуцирует рыночный
@@ -255,7 +254,7 @@
             </div>
         </section>
 
-        <section class="prices none" id="prices">
+        <section class="prices" id="prices">
             <div class="prices__content">
                 <div class="container">
                     <header class="prices__header">
@@ -364,7 +363,7 @@
             </div>
         </section>
 
-        <section class="clients none">
+        <section class="clients">
             <div class="container">
                 <header class="clients__header">
                     <h2 class="clients__title title-2">наши клиенты</h2>
@@ -411,13 +410,22 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="slider__pagination">
+                            <button class="slider__pagination-item"></button>
+                            <button
+                                class="slider__pagination-item slider__pagination-item--active"
+                            ></button>
+                            <button class="slider__pagination-item"></button>
+                            <button class="slider__pagination-item"></button>
+                            <button class="slider__pagination-item"></button>
+                        </div>
                     </div>
                     <!-- end of slider  -->
                 </div>
             </div>
         </section>
 
-        <footer class="footer none">
+        <footer class="footer">
             <div class="container">
                 <div class="footer__row">
                     <nav class="footer__nav">

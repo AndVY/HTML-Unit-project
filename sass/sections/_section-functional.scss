@@ -49,19 +49,25 @@
         flex-shrink: 0;
         margin-left: 15px;
         margin-right: 15px;
+        width: 270px;
+
+        @media (max-width: 1199px) {
+            width: 195px;
+        }
+        @media (max-width: 899px) {
+            width: 270px;
+            margin-top: 30px;
+        }
+        @media (max-width: 599px) {
+            width: 290px;
+            margin-top: 40px;
+        }
     }
 
-    @media (max-width: 1199px) {
-        width: 870px;
-    }
     @media (max-width: 899px) {
-        width: 570px;
+        margin-top: -30px;
     }
     @media (max-width: 599px) {
-        width: auto;
-
-        & > * {
-            flex-shrink: 1;
-        }
+        margin-top: -40px;
     }
 }
