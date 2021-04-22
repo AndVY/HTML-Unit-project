@@ -1,0 +1,93 @@
+// Width, height and border radius of one icon line
+$lineWidth: 20px;
+$lineHeight: 3px;
+$lineSpace: 4px;
+$lineBorderRadius: 3px;
+
+// total size of icon
+$width: 60px;
+$height: 60px;
+
+$color: #000000;
+
+.nav-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    background-color: #ffffff;
+    transition: background-color 0.2s ease-in;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $accentButton;
+        & .nav-icon__center,
+        & .nav-icon__center::before,
+        & .nav-icon__center::after {
+            background-color: #ffffff;
+        }
+    }
+}
+
+.nav-icon__center {
+    position: relative;
+    width: $lineWidth;
+    height: $lineHeight;
+
+    background-color: $color;
+    border-radius: $lineBorderRadius;
+    transition: background-color 0.2s ease-in;
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        width: $lineWidth;
+        height: $lineHeight;
+        left: 0;
+
+        background-color: $color;
+        border-radius: $lineBorderRadius;
+
+        transition: transform 0.2s ease-in, background-color 0.2s ease-in;
+    }
+
+    &::before {
+        top: -($lineHeight + $lineSpace);
+    }
+
+    &::after {
+        top: ($lineHeight + $lineSpace);
+    }
+}
+
+/* Active state*/
+
+.nav-icon.nav-icon--active {
+    position: fixed;
+    z-index: 10;
+}
+
+.nav-icon.nav-icon--active .nav-icon__center {
+    background-color: transparent;
+
+    &::before,
+    &::after {
+        top: 0;
+
+        transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+    }
+
+    &::before {
+        transform: rotate(45deg);
+    }
+
+    &::after {
+        transform: rotate(-45deg);
+    }
+}

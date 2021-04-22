@@ -85,13 +85,13 @@ legend {
     padding-right: 15px;
 
     @media (max-width: 1199px) {
-        width: 900px;
+        max-width: 900px;
     }
     @media (max-width: 899px) {
-        width: 600px;
+        max-width: 600px;
     }
     @media (max-width: 599px) {
-        width: 320px;
+        max-width: 320px;
     }
 }
 

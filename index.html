@@ -7,7 +7,7 @@
         <!-- Title and SEO -->
         <title>UNIT project</title>
         <meta name="description" content="Проект Юнит" />
-        <meta name="keywords" content="ключевые слова, фразы" />
+        <meta name="keywords" content="Проект Юнит" />
 
         <!-- Open Graph -->
         <meta
@@ -17,37 +17,32 @@
         <meta property="og:type" content="website" />
         <meta property="og:title" content="UNIT project" />
         <meta property="og:description" content="Проект Юнит" />
-        <meta property="og:image" content="./img/site-images/opengraph.jpg" />
+        <meta property="og:image" content="./img/site-images/og-unit.jpg" />
 
         <!-- Favicons -->
         <link
             rel="apple-touch-icon"
             sizes="180x180"
-            href="./img/favicons/apple-touch-icon.png"
+            href="/img/favicons/apple-touch-icon.png"
         />
         <link
             rel="icon"
             type="image/png"
             sizes="32x32"
-            href="./img/favicons/favicon-32x32.png"
+            href="/img/favicons/favicon-32x32.png"
         />
         <link
             rel="icon"
             type="image/png"
             sizes="16x16"
-            href="./img/favicons/favicon-16x16.png"
+            href="/img/favicons/favicon-16x16.png"
         />
-        <link rel="manifest" href="./img/favicons/site.webmanifest" />
-        <link
-            rel="mask-icon"
-            href="./img/favicons/safari-pinned-tab.svg"
-            color="#1a60cf"
-        />
-        <link rel="shortcut icon" href="./img/favicons/favicon.ico" />
-        <meta name="msapplication-TileColor" content="#00aba9" />
+        <link rel="manifest" href="/img/favicons/site.webmanifest" />
+        <link rel="shortcut icon" href="/img/favicons/favicon.ico" />
+        <meta name="msapplication-TileColor" content="#da532c" />
         <meta
             name="msapplication-config"
-            content="./img/favicons/browserconfig.xml"
+            content="/img/favicons/browserconfig.xml"
         />
         <meta name="theme-color" content="#ffffff" />
 
@@ -61,13 +56,25 @@
         <header class="header">
             <div class="header__wrapper">
                 <div class="header__buttons">
-                    <button class="button-rounded">
-                        <img
-                            src="./img/icons/site/menu.svg"
-                            alt="Navigation button"
-                        />
+                    <button class="nav-icon">
+                        <div class="nav-icon__center"></div>
                     </button>
-                    <button class="button-rounded">
+
+                    <!-- Navigation -->
+                    <nav class="nav">
+                        <div class="nav__title">навигация по сайту</div>
+                        <ul class="nav__list">
+                            <li><a href="#functional">Функционал</a></li>
+                            <li>
+                                <a href="#flex-control">Гибкое управление</a>
+                            </li>
+                            <li><a href="#focus">Всегда в фокусе</a></li>
+                            <li><a href="#prices">Цены</a></li>
+                            <li><a href="#clients">Отзывы клиентов</a></li>
+                        </ul>
+                    </nav>
+
+                    <button class="header__buttons-search button-rounded">
                         <img
                             src="./img/icons/site/search.svg"
                             alt="Search button"
@@ -188,14 +195,14 @@
                     <h2 class="cta__title">
                         Начните использовать <span>ЮНИТ</span> уже сегодня.
                     </h2>
-                    <a href="#prices"
-                        ><button class="button">подключить</button></a
-                    >
+                    <!-- <button class="button"> -->
+                    <a href="#prices" class="button">подключить</a>
+                    <!-- </button> -->
                 </div>
             </div>
         </section>
 
-        <section class="flex-control">
+        <section class="flex-control" id="flex-control">
             <div class="container">
                 <div class="flex-control__row">
                     <div class="flex-control__content">
@@ -225,7 +232,7 @@
             </div>
         </section>
 
-        <section class="focus">
+        <section class="focus" id="focus">
             <div class="container">
                 <div class="focus__row">
                     <div class="focus__img">
@@ -363,7 +370,7 @@
             </div>
         </section>
 
-        <section class="clients">
+        <section class="clients" id="clients">
             <div class="container">
                 <header class="clients__header">
                     <h2 class="clients__title title-2">наши клиенты</h2>
@@ -459,5 +466,7 @@
                 </div>
             </div>
         </footer>
+
+        <script src="./js/main.js"></script>
     </body>
 </html>
