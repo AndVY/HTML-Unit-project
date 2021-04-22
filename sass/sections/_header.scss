@@ -63,7 +63,11 @@
     }
 }
 
-.header__buttons-search {
+.header__buttons-nav-icon {
+    flex-shrink: 0;
+}
+
+.header__form-search {
     margin-left: auto;
 }
 

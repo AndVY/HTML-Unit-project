@@ -221,7 +221,11 @@ legend {
   }
 }
 
-.header__buttons-search {
+.header__buttons-nav-icon {
+  flex-shrink: 0;
+}
+
+.header__form-search {
   margin-left: auto;
 }
 
@@ -1116,6 +1120,7 @@ legend {
           justify-content: center;
   -webkit-box-align: center;
           align-items: center;
+  margin-right: 10px;
   width: 60px;
   height: 60px;
   border: none;
@@ -1162,7 +1167,7 @@ legend {
 /* Active state*/
 .nav-icon.nav-icon--active {
   position: fixed;
-  z-index: 10;
+  z-index: 40;
 }
 
 .nav-icon.nav-icon--active .nav-icon__center {
@@ -1203,6 +1208,7 @@ legend {
   color: #ffffff;
 }
 .nav.nav--active {
+  z-index: 30;
   top: 0;
   transition: top 0.2s ease-in;
 }
@@ -1248,7 +1254,42 @@ legend {
   }
 }
 
-.button-rounded {
+.search {
+  position: relative;
+}
+
+.search__input {
+  padding-left: 30px;
+  padding-right: 30px;
+  width: 0px;
+  height: 60px;
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  background-color: #ffffff;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 60px;
+  color: #000000;
+  transition: width 0.2s ease-in;
+}
+.search__input::-webkit-input-placeholder {
+  color: rgba(46, 46, 46, 0.5);
+}
+.search__input:-ms-input-placeholder {
+  color: rgba(46, 46, 46, 0.5);
+}
+.search__input::-ms-input-placeholder {
+  color: rgba(46, 46, 46, 0.5);
+}
+.search__input::placeholder {
+  color: rgba(46, 46, 46, 0.5);
+}
+
+.search__button {
+  position: absolute;
+  top: 0;
+  right: 0;
   display: -webkit-box;
   display: flex;
   -webkit-box-pack: center;
@@ -1262,9 +1303,39 @@ legend {
   border-radius: 50%;
   background-color: #ffffff;
   cursor: pointer;
+  transition: background-color 0.2s ease-in;
 }
-.button-rounded:hover {
+.search__button g {
+  stroke: #000000;
+  transition: stroke 0.2s ease-in;
+}
+.search__button:hover {
   background-color: #00c470;
+}
+.search__button:hover g {
+  stroke: #ffffff;
+}
+
+.search.search--visible .search__input {
+  padding-left: 30px;
+  padding-right: 70px;
+  width: 340px;
+}
+@media (max-width: 599px) {
+  .search.search--visible .search__input {
+    padding-left: 20px;
+    width: 220px;
+    font-size: 14px;
+  }
+}
+.search.search--visible .search__button {
+  background-color: #00c470;
+}
+.search.search--visible .search__button:hover {
+  background-color: #15d784;
+}
+.search.search--visible .search__button g {
+  stroke: #ffffff;
 }
 
 .button {
