@@ -49,6 +49,12 @@
         <!-- Main CSS file -->
         <link rel="stylesheet" href="./css/main.css" />
 
+        <!-- Other CSS files -->
+        <link
+            rel="stylesheet"
+            href="./libs/owlCarousel2/assets/owl.carousel.min.css"
+        />
+
         <!-- Fonts -->
         <link rel="stylesheet" href="./fonts/montserrat/stylesheet.css" />
     </head>
@@ -408,19 +414,70 @@
                     </h3>
                 </header>
                 <div class="clients__slider">
-                    <div class="slider">
-                        <button class="slider__arrow slider__arrow--left">
-                            <img
-                                src="./img/icons/site/arrow-left.svg"
-                                alt="Back"
-                            />
-                        </button>
-                        <button class="slider__arrow slider__arrow--right">
-                            <img
-                                src="./img/icons/site/arrow-right.svg"
-                                alt="Forward"
-                            />
-                        </button>
+                    <button class="slider__arrow slider__arrow--left">
+                        <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <g>
+                                <path
+                                    d="M20 12H4"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                                <path
+                                    d="M10 18L4 12L10 6"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </g>
+                        </svg>
+                    </button>
+                    <button class="slider__arrow slider__arrow--right">
+                        <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <g>
+                                <path
+                                    d="M4 12H20"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                                <path
+                                    d="M14 6L20 12L14 18"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </g>
+                        </svg>
+                    </button>
+
+                    <!-- <div class="slider__pagination">
+                            <button class="slider__pagination-item"></button>
+                            <button
+                                class="slider__pagination-item slider__pagination-item--active"
+                            ></button>
+                            <button class="slider__pagination-item"></button>
+                            <button class="slider__pagination-item"></button>
+                            <button class="slider__pagination-item"></button>
+                        </div> -->
+
+                    <!-- slider -->
+                    <div
+                        class="slider owl-carousel owl-theme"
+                        id="clients-slider"
+                    >
                         <div class="slider-item">
                             <div class="slider-item__text">
                                 <p>
@@ -446,15 +503,59 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="slider__pagination">
-                            <button class="slider__pagination-item"></button>
-                            <button
-                                class="slider__pagination-item slider__pagination-item--active"
-                            ></button>
-                            <button class="slider__pagination-item"></button>
-                            <button class="slider__pagination-item"></button>
-                            <button class="slider__pagination-item"></button>
+                        <!-- end of slider-item -->
+                        <div class="slider-item">
+                            <div class="slider-item__text">
+                                <p>
+                                    Это потрясающее приложение, которое помогло
+                                    мне завершить все мои дела и сделать
+                                    дипломный проект раньше срока.
+                                </p>
+                            </div>
+                            <div class="slider-item__author">
+                                <div class="slider-item__avatar">
+                                    <img
+                                        src="./img/content/user.jpg"
+                                        alt="User photo"
+                                    />
+                                </div>
+                                <div class="slider-item__author-desc">
+                                    <span class="slider-item__author-title"
+                                        >Фрилансер</span
+                                    >
+                                    <span class="slider-item__author-name"
+                                        >Николай Остапов</span
+                                    >
+                                </div>
+                            </div>
                         </div>
+                        <!-- end of slider-item -->
+                        <div class="slider-item">
+                            <div class="slider-item__text">
+                                <p>
+                                    Это потрясающее приложение, которое помогло
+                                    мне завершить все мои дела и сделать
+                                    дипломный проект раньше срока.
+                                </p>
+                            </div>
+                            <div class="slider-item__author">
+                                <div class="slider-item__avatar">
+                                    <img
+                                        src="./img/content/user.jpg"
+                                        alt="User photo"
+                                    />
+                                </div>
+                                <div class="slider-item__author-desc">
+                                    <span class="slider-item__author-title"
+                                        >Фрилансер</span
+                                    >
+                                    <span class="slider-item__author-name"
+                                        >Николай Остапов</span
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end of slider-item -->
                     </div>
                     <!-- end of slider  -->
                 </div>
@@ -498,5 +599,10 @@
 
         <script src="./js/nav.js"></script>
         <script src="./js/search.js"></script>
+
+        <!-- Owl Carousel 2 -->
+        <script src="./libs/jquery-3.6.0.min.js"></script>
+        <script src="./libs/owlCarousel2/owl.carousel.min.js"></script>
+        <script src="./js/clietns-carousel.js"></script>
     </body>
 </html>

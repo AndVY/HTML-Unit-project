@@ -18,8 +18,23 @@
     outline: none;
     border: none;
     border-radius: 50%;
-    background: #f5f5f5;
+    background-color: #f5f5f5;
     cursor: pointer;
+
+    transition: background-color 0.2s ease-in;
+
+    g {
+        stroke: $accentButton;
+
+        transition: stroke 0.2s ease-in;
+    }
+
+    &:hover {
+        background-color: $accentButton;
+        g {
+            stroke: #ffffff;
+        }
+    }
 
     &--left {
         top: 53px;
@@ -110,28 +125,28 @@
     color: #808080;
 }
 
-.slider__pagination {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-}
+// .slider__pagination {
+//     position: absolute;
+//     bottom: 0;
+//     left: 50%;
+//     transform: translateX(-50%);
+//     display: flex;
+// }
 
-.slider__pagination-item {
-    width: 14px;
-    height: 14px;
+// .slider__pagination-item {
+//     width: 14px;
+//     height: 14px;
 
-    border-radius: 50%;
-    border: none;
-    outline: none;
-    background: #e1e1e1;
+//     border-radius: 50%;
+//     border: none;
+//     outline: none;
+//     background: #e1e1e1;
 
-    &:not(:last-child) {
-        margin-right: 10px;
-    }
-}
+//     &:not(:last-child) {
+//         margin-right: 10px;
+//     }
+// }
 
-.slider__pagination-item--active {
-    background-color: $accentButton;
-}
+// .slider__pagination-item--active {
+//     background-color: $accentButton;
+// }
