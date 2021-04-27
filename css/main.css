@@ -1325,7 +1325,9 @@ legend {
 @media (max-width: 599px) {
   .search.search--visible .search__input {
     padding-left: 20px;
-    width: 220px;
+    padding-right: 15px;
+    width: calc(100vw - 100px);
+    max-width: 340px;
     font-size: 14px;
   }
 }

@@ -1,9 +1,5 @@
 .search {
     position: relative;
-
-    // @media (max-width: 599px) {
-    //     width: 100%;
-    // }
 }
 
 .search__input {
@@ -71,7 +67,9 @@
 
         @media (max-width: 599px) {
             padding-left: 20px;
-            width: 220px;
+            padding-right: 15px;
+            width: calc(100vw - 100px);
+            max-width: 340px;
             font-size: 14px;
         }
     }
